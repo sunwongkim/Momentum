@@ -17,6 +17,7 @@ function inputUserName(event) {
   localStorage.setItem(USERNAME_KEY, loginInput.value);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   showGreeting();
+  greeting.innerHTML = "hello " + loginInput.value;
 }
 
 const referUserName = localStorage.getItem(USERNAME_KEY);
@@ -26,7 +27,6 @@ if (referUserName === null) {
 } else {
   showGreeting();
 }
-
 // ----------
 function deleteData() {
   localStorage.removeItem(USERNAME_KEY);
