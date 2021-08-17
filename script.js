@@ -27,7 +27,7 @@ if (referUserName === null) {
   showGreeting();
 }
 // ----------
-const deleteButton1 = document.querySelector("#Delete1");
+const deleteButton1 = document.querySelector("#DeleteUserName");
 function deleteUserName() {
   localStorage.removeItem(USERNAME_KEY);
 }
