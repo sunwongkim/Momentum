@@ -29,6 +29,6 @@ if (referUserName === null) {
 // ----------
 const deleteButton1 = document.querySelector("#DeleteUserName");
 function deleteUserName() {
-  localStorage.removeItem(USERNAME_KEY);
+  localStorage.clear();
 }
 deleteButton1.addEventListener("click", deleteUserName);

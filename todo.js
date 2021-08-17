@@ -2,16 +2,20 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
+function deleteToDo() {
+  console.log("asdsad");
+}
+
 function printToDo(toDoInputValue) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  const button = document.querySelector("button");
+  span.innerHTML = toDoInputValue;
+  const button = document.createElement("button");
+  button.innerHTML = "X";
+  button.addEventListener("click", deleteToDo);
   toDoList.append(li);
   li.append(span);
   li.append(button);
-
-  span.innerHTML = toDoInputValue;
-  console.log(li);
 }
 
 function saveToDo(event) {
@@ -25,8 +29,8 @@ function saveToDo(event) {
 toDoForm.addEventListener("submit", saveToDo);
 
 // ----------
-const deleteButton2 = document.querySelector("#DeleteToDo");
-function deleteToDo() {
-  localStorage.removeItem("todo");
-}
-deleteButton2.addEventListener("click", deleteToDo);
+// const deleteButton2 = document.querySelector("#DeleteToDo");
+// function deleteToDo() {
+//   localStorage.removeItem("todo");
+// }
+// deleteButton2.addEventListener("click", deleteToDo);
