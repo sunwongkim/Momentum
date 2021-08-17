@@ -2,7 +2,6 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#loginInput");
 const loginButton = document.querySelector("#loginButton");
 const greeting = document.querySelector("#greeting");
-const button = document.querySelector("button");
 
 const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
@@ -28,7 +27,8 @@ if (referUserName === null) {
   showGreeting();
 }
 // ----------
-function deleteData() {
+const deleteButton1 = document.querySelector("#Delete1");
+function deleteUserName() {
   localStorage.removeItem(USERNAME_KEY);
 }
-button.addEventListener("click", deleteData);
+deleteButton1.addEventListener("click", deleteUserName);
