@@ -15,21 +15,24 @@
     </style>
   </head>
   <body>
+    <!-- greeting 출력 -->
     <form id="login-form" class="hidden">
       <input id="loginInput" type="text" required maxlength="10" placeholder="Write Your Name" />
       <input id="loginButton" type="submit" value="Log In" />
     </form>
-    <button id="DeleteUserName">Delete data</button>
     <h1 id="greeting" class="hidden"></h1>
+    <button id="DeleteUserName">Delete data</button>
 
+    <!-- todo 입력 -->
     <form id="todo-form">
       <input type="text" required placeholder="Write todo" />
       <input type="submit" value="submit" />
     </form>
     <!-- <button id="DeleteToDo">Delete todo</button> -->
-
+    <!-- todo-list -->
     <ul id="todo-list"></ul>
 
+    <!-- 시계 -->
     <h2 id="clock"></h2>
     <div id="quote">
       <p id="quoteSpace"></p>

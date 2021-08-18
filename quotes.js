@@ -16,9 +16,9 @@ const quotes = [
   { quote: "iii", author: "999" },
   { quote: "jjj", author: "000" },
 ];
+// quotes 랜덤 출력
 const randomNumberQuotes = Math.floor(Math.random() * quotes.length);
 console.log(randomNumberQuotes);
-
 console.log(quotes[randomNumberQuotes].quote);
 console.log(quotes[randomNumberQuotes].author);
 quoteSpace.innerHTML = quotes[randomNumberQuotes].quote;

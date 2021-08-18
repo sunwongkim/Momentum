@@ -6,27 +6,31 @@ const greeting = document.querySelector("#greeting");
 const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
 
+// greeting .3rd / localStorage-username 노출
 function showGreeting() {
   greeting.classList.remove(HIDDEN_CLASSNAME);
   greeting.innerHTML = "hello " + referUserName;
 }
 
-function inputUserName(event) {
+// greeting .2nd / localStorage-username 저장
+function saveUserName(event) {
   event.preventDefault();
   localStorage.setItem(USERNAME_KEY, loginInput.value);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   showGreeting();
-  greeting.innerHTML = "hello " + loginInput.value;
+  // greeting.innerHTML = "hello " + loginInput.value;
 }
 
+// greeting .1st / localStorage-username 판별
 const referUserName = localStorage.getItem(USERNAME_KEY);
 if (referUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", inputUserName);
+  loginForm.addEventListener("submit", saveUserName);
 } else {
   showGreeting();
 }
-// ----------
+
+// localStorage 삭제 버튼----------
 const deleteButton1 = document.querySelector("#DeleteUserName");
 function deleteUserName() {
   localStorage.clear();
