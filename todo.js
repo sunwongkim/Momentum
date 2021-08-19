@@ -2,30 +2,36 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
-// todo - 3 / localStorage 제거
+// todo .3rd / localStorage-todo 제거
 function deleteToDo(event) {
   console.log(event.target.parentElement);
   event.target.parentElement.remove();
+  console.log(toDos);
 }
 
-// todo-list - 2 / localStorage 생성
+// todo-list .2nd / localStorage-todo 생성
 function printToDo(toDoInputValue) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   span.innerHTML = toDoInputValue;
   const button = document.createElement("button");
   button.innerHTML = "❌";
-  button.addEventListener("click", deleteToDo);
   toDoList.append(li);
   li.append(span);
   li.append(button);
+  button.addEventListener("click", deleteToDo);
 }
 
-// todo-list - 1 / localStorage 저장
+const toDos = [];
+
+// todo-list .1st / localStorage-todo 저장
 function saveToDo(event) {
   event.preventDefault();
   const toDoInputValue = toDoInput.value;
-  localStorage.setItem("todo", toDoInputValue);
+  toDos.push(toDoInputValue);
+  localStorage.setItem("todos", toDos);
+  console.log(toDos);
+  console.log(localStorage.getItem("todos"));
   toDoInput.value = "";
   printToDo(toDoInputValue);
 }
