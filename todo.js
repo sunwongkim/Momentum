@@ -29,7 +29,7 @@ function saveToDo(event) {
   event.preventDefault();
   const toDoInputValue = toDoInput.value;
   toDos.push(toDoInputValue);
-  localStorage.setItem("todos", toDos);
+  localStorage.setItem("todos", JSON.stringify(toDos));
   console.log(toDos);
   console.log(localStorage.getItem("todos"));
   toDoInput.value = "";
