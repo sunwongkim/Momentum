@@ -7,9 +7,9 @@ const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
 
 // greeting .3rd / localStorage-username 노출
-function showGreeting() {
+function showGreeting(getUserName) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerHTML = "hello " + referUserName;
+  greeting.innerHTML = "hello " + getUserName;
 }
 
 // greeting .2nd / localStorage-username 저장
@@ -17,7 +17,7 @@ function saveUserName(event) {
   event.preventDefault();
   localStorage.setItem(USERNAME_KEY, loginInput.value);
   loginForm.classList.add(HIDDEN_CLASSNAME);
-  showGreeting();
+  showGreeting(loginInput.value);
   // greeting.innerHTML = "hello " + loginInput.value;
 }
 
@@ -27,7 +27,7 @@ if (referUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", saveUserName);
 } else {
-  showGreeting();
+  showGreeting(referUserName);
 }
 
 // localStorage 삭제 버튼----------
