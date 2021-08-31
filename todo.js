@@ -14,7 +14,7 @@ function deleteToDo(event) {
 function printToDo(toDoInputValue) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  span.innerHTML = toDoInputValue;
+  span.innerHTML = toDoInputValue.text;
   const button = document.createElement("button");
   button.innerHTML = "❌";
   toDoList.append(li);
@@ -29,10 +29,14 @@ let toDos = [];
 function saveToDo(event) {
   event.preventDefault();
   const toDoInputValue = toDoInput.value;
-  toDos.push(toDoInputValue);
+  const toDosObj = {
+    text: toDoInputValue,
+    id: Date.now(),
+  };
+  toDos.push(toDosObj);
+  printToDo(toDosObj);
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
   toDoInput.value = "";
-  printToDo(toDoInputValue);
   // console.log(toDos);
   // console.log(localStorage.getItem(TODOS_KEY));
 }
