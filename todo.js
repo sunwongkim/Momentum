@@ -3,18 +3,24 @@ const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
+
+let toDos = [];
+
 // todo .3rd / localStorage-todo 제거
 function deleteToDo(event) {
-  console.log(event.target.parentElement);
-  event.target.parentElement.remove();
-  console.log(toDos);
+  const li = event.target.parentElement;
+  console.log(li.id);
+  li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 // todo-list .2nd / localStorage-todo 생성
-function printToDo(toDoInputValue) {
+function printToDo(toDosObj) {
   const li = document.createElement("li");
+  li.id = toDosObj.id;
   const span = document.createElement("span");
-  span.innerHTML = toDoInputValue.text;
+  span.innerHTML = toDosObj.text;
   const button = document.createElement("button");
   button.innerHTML = "❌";
   toDoList.append(li);
@@ -22,8 +28,6 @@ function printToDo(toDoInputValue) {
   li.append(button);
   button.addEventListener("click", deleteToDo);
 }
-
-let toDos = [];
 
 // todo-list .1st / localStorage-todo 저장
 function saveToDo(event) {
