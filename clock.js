@@ -9,4 +9,4 @@ function showTime() {
   console.log(nowTime);
   clock.innerHTML = nowTime;
 }
-// setInterval(showTime, 1000);
+setInterval(showTime, 1000);
