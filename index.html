@@ -9,32 +9,24 @@
     <title>Momentum</title>
   </head>
   <body>
-    <h1 id="title">My ToDo List</h1>
+    <h1 class="title">My ToDo List</h1>
     <!-- 시계 -->
-    <div id="clock"></div>
-    <!-- https://www.codingnepalweb.com/digital-clock-using-javascript/ -->
-    <div class="wrapper">
-      <div class="display">
-        <div id="time"></div>
-      </div>
-      <span></span>
-      <span></span>
-    </div>
+    <div class="clock"></div>
     <!-- greeting 출력 -->
     <form id="login-form" class="hidden">
-      <input id="loginInput" type="text" required maxlength="10" placeholder="Write Your Name" />
+      <input id="loginInput" class="textarea" type="text" required maxlength="10" placeholder="Write Your Name" />
       <input id="loginButton" class="button" type="submit" value="Log In" />
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <!-- localStorage 초기화 -->
-    <button id="DeleteUserName" class="button">Delete data</button>
     <!-- todo 입력 -->
     <form id="todo-form">
-      <input type="text" required placeholder="Write todo" />
+      <input type="text" class="textarea" required placeholder="Write todo" />
       <input type="submit" class="button" value="submit" />
     </form>
     <!-- todo-list -->
-    <ul id="todo-list"></ul>
+    <ul class="todo-list"></ul>
+    <!-- localStorage 초기화 -->
+    <button id="DeleteUserName" class="button">Delete data</button>
     <!-- 명언 -->
     <div id="quote">
       <p id="quoteSpace"></p>
@@ -48,7 +40,7 @@
 
     <script src="script.js"></script>
     <script src="clock.js"></script>
-    <script src="clock2.js"></script>
+    <!-- <script src="clock2.js"></script> -->
     <script src="quotes.js"></script>
     <!-- <script src="background.js"></script> -->
     <script src="todo.js"></script>

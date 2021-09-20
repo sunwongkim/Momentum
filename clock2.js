@@ -20,3 +20,4 @@ setInterval(() => {
   }
   time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
 });
+//  주소 : https://www.codingnepalweb.com/digital-clock-using-javascript/

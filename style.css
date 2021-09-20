@@ -12,38 +12,42 @@
   color: red;
 }
 body {
-  background-image: url("https://www.teahub.io/photos/full/341-3414223_wallpaper-significado-power-wallpaper-android.jpg");
+  background-image: url("https://c.wallhere.com/photos/ab/b1/minimalism_pattern_monochrome_bricks_wall-156406.jpg!d");
   width: 100%;
 }
-#title {
+.title {
+  text-align: center;
   color: white;
   font-size: 100px;
-  text-align: center;
-  margin-top: 5%;
+  margin-top: 10%;
   font-family: "Gaegu", cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
 }
-#clock {
+.clock {
   text-align: center;
-  font-size: 100px;
   color: white;
-  font-family: "DS-Digital", sans-serif;
-}
-img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  font-size: 100px;
+  font-family: "Gaegu", cursive;
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+  /* 그림자 가로, 세로, 반경, 색상 */
+  /* https://codepen.io/FelixRilling/pen/qzfoc */
 }
 .button {
   background-color: white;
+  width: 100px;
+  height: 40px;
+}
+#greeting {
+  text-align: center;
+  color: white;
+  font-size: 40px;
 }
 #login-form {
   text-align: center;
   margin-top: 10%;
 }
-#loginInput {
+.textarea {
+  width: 500px;
   border: 0px;
   border-bottom: black solid 3px;
   /* outline: none; */
@@ -52,68 +56,17 @@ img {
 #todo-form {
   text-align: center;
 }
+.todo-list {
+  text-align: center;
+}
 .hidden {
   display: none;
 }
-
-/* html,
-body {
-  display: grid;
-  height: 100%;
-  place-items: center;
-  background: #000;
-} */
-.wrapper {
-  height: 100px;
-  width: 360px;
-  position: relative;
-  /* background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); */
-  border-radius: 10px;
-  cursor: default;
-  animation: animate 1.5s linear infinite;
-  margin: auto;
-}
-.wrapper .display,
-.wrapper span {
+/* img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.wrapper .display {
-  z-index: 999;
-  height: 85px;
-  width: 345px;
-  background: #1b1b1b;
-  border-radius: 6px;
-  text-align: center;
-}
-.display #time {
-  line-height: 85px;
-  color: #fff;
-  font-size: 50px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-family: "DS-Digital", sans-serif;
-  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate 1.5s linear infinite;
-}
-@keyframes animate {
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
-.wrapper span {
-  height: 100%;
+  top: 0px;
+  left: 0px;
   width: 100%;
-  border-radius: 10px;
-  background: inherit;
-}
-.wrapper span:first-child {
-  filter: blur(7px);
-}
-.wrapper span:last-child {
-  filter: blur(20px);
-}
+  height: 100%;
+  z-index: -1;
+} */

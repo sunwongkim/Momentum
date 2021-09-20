@@ -7,7 +7,6 @@ function showTime() {
   const seconds = String(time.getSeconds()).padStart(2, "0");
   const nowTime = hours + ":" + minutes + ":" + seconds;
   clock.innerHTML = nowTime;
-  console.log(nowTime);
 }
-showTime();
+showTime(); // 시작 시 딜레이 없이 시계 바로 노출
 setInterval(showTime, 1000);
