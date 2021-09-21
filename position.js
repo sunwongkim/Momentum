@@ -11,10 +11,12 @@ function success(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const city = document.querySelector("#weather span:first-child");
-      const weather = document.querySelector("#weather span:last-child");
+      const city = document.querySelector(".position--city");
+      const weather = document.querySelector(".position--weather");
+      const temp = document.querySelector(".position--temp");
       city.innerHTML = data.name;
-      weather.innerHTML = data.weather[0].main + "  " + data.main.temp;
+      weather.innerHTML = data.weather[0].main;
+      temp.innerHTML = data.main.temp;
     });
 }
 

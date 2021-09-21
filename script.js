@@ -31,7 +31,7 @@ if (referUserName === null) {
 }
 
 // localStorage 삭제 버튼----------
-const deleteButton1 = document.querySelector(".delete-username");
+const deleteButton1 = document.querySelector(".delete-button");
 function deleteUserName() {
   localStorage.clear();
 }

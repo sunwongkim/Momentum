@@ -13,37 +13,38 @@
     <!-- 시계 -->
     <div class="clock"></div>
     <!-- greeting 출력 -->
-    <form class="login-form hidden">
+    <form class="login-form submit hidden">
       <input class="login-form__login-input textarea" type="text" required maxlength="10" placeholder="Write Your Name" />
       <input class="login-form__login-button button" type="submit" value="Log In" />
     </form>
-    <h1 class="greeting hidden"></h1>
+    <p class="greeting hidden"></p>
     <!-- todo 입력 -->
-    <form class="todo-form">
+    <form class="todo-form submit">
       <input type="text" class="todo-form__todo-input textarea" required placeholder="Write todo" />
       <input type="submit" class="todo-form__todo-button button" value="submit" />
     </form>
     <!-- todo-list -->
     <ul class="todo-list"></ul>
     <!-- localStorage 초기화 -->
-    <button class="delete-username button">Delete data</button>
+    <button class="delete-button button">Delete data</button>
     <!-- 명언 -->
     <div class="quote">
       <p class="quote__items quote--quote"></p>
       <p class="quote__items quote--author"></p>
     </div>
     <!-- 날씨 -->
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div class="position">
+      <p class="position--city"></p>
+      <p class="position--weather"></p>
+      <p class="position--temp"></p>
     </div>
 
     <script src="script.js"></script>
     <script src="clock.js"></script>
     <!-- <script src="clock2.js"></script> -->
     <script src="quotes.js"></script>
-    <!-- <script src="background.js"></script> -->
     <script src="todo.js"></script>
-    <script src="weather.js"></script>
+    <script src="position.js"></script>
+    <!-- <script src="background.js"></script> -->
   </body>
 </html>
