@@ -37,12 +37,12 @@ body {
   width: 100px;
   height: 40px;
 }
-#greeting {
+.greeting {
   text-align: center;
   color: white;
   font-size: 40px;
 }
-#login-form {
+.login-form {
   text-align: center;
   margin-top: 10%;
 }
@@ -53,7 +53,7 @@ body {
   /* outline: none; */
   outline-color: aqua;
 }
-#todo-form {
+.todo-form {
   text-align: center;
 }
 .todo-list {

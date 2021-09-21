@@ -1,7 +1,7 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#loginInput");
-const loginButton = document.querySelector("#loginButton");
-const greeting = document.querySelector("#greeting");
+const loginForm = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form__login-input");
+const loginButton = document.querySelector(".login-form__login-button");
+const greeting = document.querySelector(".greeting");
 
 const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
@@ -31,7 +31,7 @@ if (referUserName === null) {
 }
 
 // localStorage 삭제 버튼----------
-const deleteButton1 = document.querySelector("#DeleteUserName");
+const deleteButton1 = document.querySelector(".delete-username");
 function deleteUserName() {
   localStorage.clear();
 }

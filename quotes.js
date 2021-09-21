@@ -1,5 +1,5 @@
-const quoteSpace = document.querySelector("#quoteSpace");
-const authorSpace = document.querySelector("#authorSpace");
+const quoteSpace = document.querySelector(".quote--quote");
+const authorSpace = document.querySelector(".quote--author");
 
 const quotes = [
   {

@@ -1,6 +1,6 @@
-const toDoForm = document.querySelector("#todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.querySelector("#todo-list");
+const toDoForm = document.querySelector(".todo-form");
+const toDoInput = document.querySelector(".todo-form__todo-input");
+const toDoList = document.querySelector(".todo-list");
 
 const TODOS_KEY = "todos";
 
@@ -56,7 +56,7 @@ if (savedToDos !== null) {
 }
 
 // ----------
-// const deleteButton2 = document.querySelector("#DeleteToDo");
+// const deleteButton2 = document.querySelector(".delete-username");
 // function deleteToDo() {
 //   localStorage.removeItem("todo");
 // }

@@ -1,4 +1,4 @@
-const clock = document.querySelector("#clock");
+const clock = document.querySelector(".clock");
 
 function showTime() {
   const time = new Date();
