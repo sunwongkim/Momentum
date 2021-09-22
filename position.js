@@ -14,9 +14,9 @@ function success(position) {
       const city = document.querySelector(".position--city");
       const weather = document.querySelector(".position--weather");
       const temp = document.querySelector(".position--temp");
-      city.innerHTML = data.name;
-      weather.innerHTML = data.weather[0].main;
-      temp.innerHTML = data.main.temp;
+      city.innerHTML = "place" + " : " + data.name;
+      weather.innerHTML = "weather" + " : " + data.weather[0].main;
+      temp.innerHTML = "temp" + " : " + data.main.temp + "º";
     });
 }
 
