@@ -1,11 +1,9 @@
 /* 얇은 글씨체 font-family: "Gaegu", cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
-/* 디지털 글씨체 font-family: "DS-Digital", sans-serif; */
-@import url("http://fonts.cdnfonts.com/css/ds-digital");
-/* 필기체 font-family: Yellowtail; */
-@import url("//fonts.googleapis.com/css?family=Yellowtail");
-/* 필기체2 font-family: Vibur; */
-@import url("//fonts.googleapis.com/css?family=Vibur");
+/* 필기체 font-family: 'Yellowtail', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+/* 필기체2 font-family: 'Vibur', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Vibur&family=Yellowtail&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,24 +21,20 @@ body {
   font-weight: bold;
   font-family: "Gaegu", cursive;
   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
-
   margin-top: 10px;
   margin-right: 10px;
 }
 .title {
   text-align: center;
   font-size: 120px;
-  font-family: Yellowtail;
-
+  font-family: "Yellowtail", cursive;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #bc13fe, 0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe;
-
   margin: 10px;
 }
 .clock {
   text-align: center;
   font-size: 60px;
-  font-family: Vibur;
-  /* text-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff; */
+  font-family: "Vibur", cursive;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px mediumslateblue, 0 0 82px mediumslateblue, 0 0 92px mediumslateblue, 0 0 102px mediumslateblue;
 }
 .greeting {
@@ -76,7 +70,7 @@ body {
   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
 }
 
-/* 버튼 */
+/* 버튼 시작*/
 .login-form__login-button,
 .todo-form__todo-button {
   display: none;
@@ -101,11 +95,13 @@ button {
   font-family: "Gaegu", cursive;
   margin: 5px;
 }
+/* 반대쪽에 투명 버튼 배치하여 대칭 맞춤 */
 .todo-form__balance-button {
   width: 90px;
 }
-/* 버튼 */
+/* 버튼 종료 */
 
+/* greeting 표시 전환 */
 .hidden {
   display: none;
 }
